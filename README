@@ -1,0 +1,11 @@
+1. Demonstrate multiple graph traversal algos
+
+2. Build binary search tree, heaps, etc
+
+3. Explain tiered memory cached systems
+
+In a tiered memory cache system the top tier is generally the smallest and fastest cache 'level.' As you move down the tier the memory size increases and the speed decreases.
+
+4. Identify disconnected graph components
+
+5. Build graph clusters using similarity metrics
