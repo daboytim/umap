@@ -27,6 +27,12 @@ int main(int argc, char** argv) {
 	std::cout << bts.contains(4) << std::endl;
 	std::cout << bts.contains(7) << std::endl;
 
+	bts.clear();
+	std::cout << bts.traverse() << std::endl;
+
+	bts.insert(1);
+	std::cout << bts.traverse() << std::endl;
+
 	return 0;
 }
 

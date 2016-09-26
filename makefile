@@ -1,5 +1,5 @@
 CC       :=g++
-STD		 :=-std=gnu++11
+STD		 :=-std=c++11
 CFLAGS   :=$(STD) -c
 DFLAGS   :=-Wall -g -rdynamic -DDEBUG
 LDFLAGS  :=

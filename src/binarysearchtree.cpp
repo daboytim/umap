@@ -17,6 +17,10 @@ BinarySearchTree::BinarySearchTree(int value) {
 	this->root = new BTNode(value);
 }
 
+BinarySearchTree::~BinarySearchTree() {
+	do_clear(this->root);
+}
+
 void BinarySearchTree::insert(int value) {
 	do_insert(this->root, value);
 }
@@ -70,5 +74,18 @@ void BinarySearchTree::do_traverse(BTNode*& root, std::string& s) {
 		do_traverse(root->leftChild, s);
 		s += std::to_string(root->value) + ',';
 		do_traverse(root->rightChild, s);
+	}
+}
+
+void BinarySearchTree::clear() {
+	do_clear(this->root);
+}
+
+void BinarySearchTree::do_clear(BTNode*& root) {
+	if (root) {
+		do_clear(root->leftChild);
+		do_clear(root->rightChild);
+		delete root;
+		root = nullptr;
 	}
 }
