@@ -14,11 +14,14 @@ TARGET   :=test
 
 .PHONY: all clean debug
 
-all: $(BIN_DIR)/$(TARGET)
+all: $(BIN_DIR) $(BIN_DIR)/$(TARGET)
 
 clean:
 	rm -f $(OBJ) $(BIN_DIR)/$(TARGET)
-	
+
+$(BIN_DIR): 
+	mkdir -p -- $@
+
 $(BIN_DIR)/%.d: $(SRC_DIR)/%.cpp
 	@set -e; rm -f $@; \
     $(CC) $(STD) -M $(CFLAGS) $< -MF $@.$$$$; \
